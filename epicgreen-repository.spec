@@ -9,7 +9,7 @@ Source0:        https://github.com/epicgreen/epicgreen-repository/releases/downl
 Requires:       dnf
 
 %prep
-%setup -q
+%setup -q -n epicgreen-repository
 
 %build
 #Nothing to build
