@@ -1,12 +1,18 @@
 Name:           epicgreen-repository
 Version:        9
-Release:        1
+Release:        1%{?dist}
 Summary:        EpicGreen DNF Repository configuration
 License:        AGPLv3
 Group:          System Tools
 URL:            https://github.com/epicgreen/epicgreen-repository/
 Source0:        https://github.com/epicgreen/epicgreen-repository/releases/download/v%{version}/epicgreen-repository-%{version}.tar.gz
 Requires:       dnf
+BuildArch:      x86_64
+
+%description
+EpicGreen DNF Repository configuration
+
+%global debug_package %{nil}
 
 %prep
 %setup -q -n epicgreen-repository
@@ -16,8 +22,8 @@ Requires:       dnf
 
 %install
 mkdir -p %{buildroot}/%{_sysconfdir}
-install -d 755 %{buildroot}/%{_sysconfdir}/pki/rpm-gpg
-install -d 755 %{buildroot}/%{_sysconfdir}/yum.repos.d
+mkdir -p %{buildroot}/%{_sysconfdir}/pki/rpm-gpg
+mkdir -p %{buildroot}/%{_sysconfdir}/yum.repos.d
 install -m 644 RPM-GPG-KEY-epicgreen %{buildroot}/%{_sysconfdir}/pki/rpm-gpg
 install -m 644 epicgreen.repo %{buildroot}/%{_sysconfdir}/yum.repos.d/epicgreen.repo
 
