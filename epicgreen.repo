@@ -1,0 +1,6 @@
+[epicgreen]
+name=EpicGreen
+baseurl=https://repository.epicgreen.nl/9/RPMS/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-epicgreen
