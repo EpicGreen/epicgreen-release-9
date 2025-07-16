@@ -8,6 +8,6 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-epicgreen
 [epicgreen-source]
 name=EpicGreen
 baseurl=https://repository.epicgreen.nl/el9/SOURCES/
-enabled=1
+enabled=0
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-epicgreen

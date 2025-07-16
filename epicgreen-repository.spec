@@ -35,6 +35,9 @@ install -m 644 epicgreen.repo %{buildroot}/%{_sysconfdir}/yum.repos.d/epicgreen.
 EpicGreen DNF Repository configuration
 
 %changelog
+* Sun Jul 06 2025 Ante de Baas <antedebaas@users.github.com> 9-2
+- Set source repo to disabled
+
 * Sun Jul 06 2025 Ante de Baas <antedebaas@users.github.com> 9-1
 - Initial package
 
